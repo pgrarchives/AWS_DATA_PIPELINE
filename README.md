@@ -9,7 +9,7 @@ This repository contains the code and configurations for a robust data pipeline 
 ## Components
 
 ### 1. Data Extraction
-- **Source**: Spotify API
+- **Source**: Spotify API(https://developer.spotify.com/dashboard)
 - **Tool**: AWS Lambda
 - **Description**: A Python script runs within AWS Lambda, triggered daily by AWS CloudWatch, to fetch data from the Spotify API.
 
