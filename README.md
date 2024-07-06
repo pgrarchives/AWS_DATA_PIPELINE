@@ -12,22 +12,27 @@ This repository contains the code and configurations for a robust data pipeline 
 - **Source**: Spotify API
 - **Tool**: AWS Lambda
 - **Description**: A Python script runs within AWS Lambda, triggered daily by AWS CloudWatch, to fetch data from the Spotify API.
+![image](https://github.com/pgrarchives/aws-etl-datapipeline/assets/112724112/13dcb0a2-0ca6-4b24-bbd0-644ab89981b4)
 
 ### 2. Data Storage
 - **Storage**: AWS S3
 - **Description**: Raw data fetched from Spotify is stored in JSON format in an S3 bucket. Post-transformation, data is stored in a structured format in a separate S3 bucket.
+![image](https://github.com/pgrarchives/aws-etl-datapipeline/assets/112724112/448c002e-1b2f-4108-84fc-3c66170c33aa)
 
 ### 3. Data Transformation
 - **Tool**: AWS Lambda
 - **Description**: Another Lambda function is triggered to transform the raw JSON data into a structured format suitable for analysis.
+![image](https://github.com/pgrarchives/aws-etl-datapipeline/assets/112724112/d95b7912-2741-4ce9-9fa7-e2fa1372eaaa)
 
 ### 4. Data Loading and Cataloging
 - **Tool**: AWS Glue
 - **Description**: A Glue Crawler updates the AWS Glue Data Catalog with the new schema after transformations. The catalog is used for managing and accessing data schema information.
+![image](https://github.com/pgrarchives/aws-etl-datapipeline/assets/112724112/76f2c163-98c1-45e0-adfd-040eb659c93c)
 
 ### 5. Data Querying
 - **Tool**: AWS Athena
 - **Description**: Data stored in S3 can be queried using SQL through AWS Athena, providing a powerful interface for running ad-hoc queries and generating reports.
+![image](https://github.com/pgrarchives/aws-etl-datapipeline/assets/112724112/519f0a41-be74-49f1-a7fe-6d4cf44b73f4)
 
 ## Setup Instructions
 
